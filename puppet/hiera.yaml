@@ -1,0 +1,6 @@
+:backends:
+  - yaml
+:hierarchy:
+  - "common"
+:yaml:
+  :datadir: "%{::hiera_data_dir}"

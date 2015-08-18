@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+forge "https://forgeapi.puppetlabs.com"
+
+mod 'puppet-nginx',
+    :git => 'git://github.com/jfryman/puppet-nginx.git'
+
+mod 'puppet-php',
+    :git => 'git://github.com/jippi/puppet-php.git'

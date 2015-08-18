@@ -1,0 +1,25 @@
+---
+site::user: "%{::user}"
+site::php_version: latest
+php::fpm::emergency_restart_threshold: 10
+php::fpm::emergency_restart_interval: 1m
+php_fpm_pool:
+    www:
+        listen: /var/run/php5-fpm.sock
+        listen_owner: www-data
+        listen_group: www-data
+        listen_mode: '0600'
+        pm: dynamic
+        pm_max_children: 20
+        pm_start_servers: 5
+        pm_min_spare_servers: 5
+        pm_max_spare_servers: 20
+        pm_max_requests: 500
+nginx::config::worker_processes: 1
+nginx::config::worker_connections: 1024
+nginx::config::multi_accept: 'on'
+nginx::config::events_use: 'epoll'
+nginx::config::server_tokens: 'off'
+nginx::config::http_tcp_nodelay: 'on'
+nginx::config::http_tcp_nopush: 'on'
+nginx::config::gzip: 'on'

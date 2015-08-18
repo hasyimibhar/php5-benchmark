@@ -1,0 +1,34 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    puppetlabs-apt (2.0.1)
+      puppetlabs-stdlib (>= 4.5.0)
+    puppetlabs-concat (1.2.2)
+      puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
+    puppetlabs-inifile (1.2.0)
+    puppetlabs-stdlib (4.6.0)
+
+GIT
+  remote: git://github.com/jfryman/puppet-nginx.git
+  ref: master
+  sha: 9d456955c26edcf4477304b11dd6febfaf2d1e94
+  specs:
+    puppet-nginx (0.2.6)
+      puppetlabs-apt (< 3.0.0, >= 1.8.0)
+      puppetlabs-concat (< 2.0.0, >= 1.1.1)
+      puppetlabs-stdlib (< 5.0.0, >= 4.2.0)
+
+GIT
+  remote: git://github.com/jippi/puppet-php.git
+  ref: master
+  sha: 4d0648af32dff3b5e78dd8a3c964888257271d89
+  specs:
+    puppet-php (0.9.0)
+      puppetlabs-apt (> 0.0.0)
+      puppetlabs-inifile (> 0.0.0)
+      puppetlabs-stdlib (> 0.0.0)
+
+DEPENDENCIES
+  puppet-nginx (>= 0)
+  puppet-php (>= 0)
+
